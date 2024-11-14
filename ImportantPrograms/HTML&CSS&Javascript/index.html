@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <title>Basic Html</title>
+    <style>
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+      .c1{
+        transform:rotate(270deg) ;
+      }
+      .container{
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: rgb(66, 255, 66); height: 50px; width:100% ; border-bottom: 10px solid green; border-radius: 5px;" >
+      <button style="margin: 3px;  border-radius: 5px; background-color: rgb(255, 0, 0); color:white;padding:3px;"> HOME</button>
+    </div>
+    Hello,Good Moring..
+    <h1>Hello ,Good Morning</h1>
+    <h2>Hello ,Good Morning</h2>
+    <h3>Hello ,Good Morning</h3>
+    <h4>Hello ,Good Morning</h4>
+    <i>Hello ,Good Morning</i><br>
+    <h1>Hello ,<sub> Good Morning</sub></h1>
+    G<sup>O</sup>O<sup>L</sup>E 
+
+    <div style="background-color:blue; color: white;">
+      Good Morinig
+    </div>
+
+    <table border="1px">
+    <tr>
+      <td colspan="2">Period</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td rowspan="4" class="c">Time</td>
+      <td rowspan="2">From</td>
+      <td>   am</td>
+      <td>   am</td>
+      <td>   am</td>
+      <td>   am</td>
+    </tr>
+    <tr>
+      <td>   pm</td>
+      <td>   pm</td>
+      <td>   pm</td>
+      <td>   pm</td>
+     
+    </tr>
+    <tr>
+      <td rowspan="2">TO</td>
+      <td>   am</td>
+      <td>   am</td>
+      <td>   am</td>
+      <td>   am</td>
+
+    </tr>
+    <tr>
+      <td>   pm</td>
+      <td>   pm</td>
+      <td>   pm</td>
+      <td>   pm</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="c1">MON</td>
+      <td>Subject</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="c1">TUE</td>
+      <td>Subject</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="c1">WED</td>
+      <td>Subject</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="c1">THU</td>
+      <td>Subject</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="c1">FRI</td>
+      <td>Subject</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </table>
+
+    <button style="margin: 3px;  border-radius: 5px; background-color: rgb(255, 0, 0); color:white;padding:3px;" id="b1" onclick="incr()"> Increment Count</button>
+
+    <div id="c1">
+       0
+    </div>
+
+    <div class="container">
+
+    <div style="width: 313px; background-color: black;">
+        <img id="i1" src="OffBulb.jpg" height="285" width="313">
+        <button onclick="call1()">Bulb On</button>
+        <button onclick="call2()">Bulb Off</button>
+         
+    </div>
+ 
+   <div >
+      <select id="s1">
+        <option value="Apple.jpg">Apple</option>
+        <option value="Orange.jpg">Orange</option>
+        <option value="Mango.jpg">Mango</option>
+      </select>
+
+
+      <button id="b2" onclick="showImage()">Show Image</button> 
+
+
+      <div id="d2">
+      <img id ="i2" src="Apple.jpg" height="250" width="250">
+      </div>
+
+   </div>
+
+    </div>
+     
+
+      <script>
+        let count=0;
+        function call1(){
+          document.getElementById("i1").src="OnBulb.png";
+        }
+        function call2(){
+          document.getElementById("i1").src="OffBulb.jpg";
+        }
+        function incr(){
+          count++;
+           
+         document.getElementById("c1").innerText=count;
+        }
+        
+      </script>
+
+     <script>
+        function showImage(){
+            const drop= document.getElementById("s1");
+            console.log(drop.value);
+            document.getElementById("i2").src=drop.value;
+        }
+     </script>
+
+    
+     <input id="num1" type="number" placeholder="Enter Num1">
+     <input id="num2" type="number" placeholder="Entr Num2">
+
+     <select id="s2">
+      <option value="Add">Addititon</option>
+      <option value="Sub">Subtraction</option>
+      <option value="Mul">Multiplication</option>
+    </select>
+
+    <button id="b3" onclick="calculate()">Show Image</button> 
+
+    <div id="d3"></div>
+
+    <script>
+      function calculate(){
+        const num1=Number(document.getElementById("num1").value);
+        const num2=Number(document.getElementById("num2").value);
+
+        const op = document.getElementById("s2").value;
+
+        const ans=document.getElementById("d3");
+
+        if(op==="Add")  ans.innerText=num1+num2;
+        if(op=="Sub") ans.innerText=num1-num2;
+        if(op=="Mul") ans.innerText=num1*num2;
+      }
+    </script>
+
+
+
+
+
+
+
+
+    
+       
+
+  </body>
+</html>
